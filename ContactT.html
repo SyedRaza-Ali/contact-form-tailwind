@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-tr from-green-500 to-indigo-200 font-poppins">
+    <div class="bg-white p-8 md:p-5 rounded-xl shadow-xl max-w-lg w-full animate-fadeIn">
+        <div class="form-header text-center">
+            <h1 class="text-2xl font-semibold mb-2 text-black">Contact Us</h1>
+            <p class="text-lg text-gray-600">We'd love to hear from you! Please fill out the form below.</p>
+        </div>
+        <form class="contact-form mt-6">
+            <div class="form-group mb-5">
+                <label for="name" class="block font-medium text-black mb-1">Your Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    required 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-300 text-base"
+                >
+            </div>
+            <div class="form-group mb-5">
+                <label for="email" class="block font-medium text-black mb-1">Your Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email" 
+                    required 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-300 text-base"
+                >
+            </div>
+            <div class="form-group mb-5">
+                <label for="message" class="block font-medium text-black mb-1">Your Message</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Write your message here" 
+                    required 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-300 text-base resize-none"
+                ></textarea>
+            </div>
+            <button 
+                type="submit" 
+                class="submit-btn w-full py-3 px-5 bg-green-500 text-white font-semibold rounded-lg hover:bg-indigo-300 transition duration-300"
+            >
+                Send Message
+            </button>
+        </form>
+    </div>
+</body>
+</html>
